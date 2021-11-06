@@ -1,0 +1,703 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: sans-serif;
+}
+
+/*----------------------------------INDEX.HTML Y CATEGORIA.HTML------------------------------*/
+/*----------Header-----------*/
+header{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.row{
+  margin: 0 auto;  
+}
+.row--primary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: white;
+  width: 90%;
+  
+}
+
+.col--primary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col--primary h1{
+  padding-right: 1rem;
+  font-family: 'Cormorant Garamond';
+}
+
+.col--secondary{
+  position: relative;
+}
+.form__input{
+  width: 31.25rem;
+  height: 2.813rem;
+  border: solid 0.25rem  #e8a188;
+  border-radius: 1.25rem;
+  outline: none; 
+  
+  padding-left: 0.625rem;
+  font-size: 1.125rem;
+  
+}
+.form__button{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.938rem;
+}
+.col--tertiary{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  
+}
+.col--tertiary .list li{
+  padding-left: 2rem;
+}
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row--secondary{
+  height: 50px;
+  background-color:  #26427d;
+}
+.row--secondary .nav .nav__list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.row--secondary .nav .nav__list .nav__item{
+  padding: 0.938rem;
+  color: white;
+}
+.nav__item--mitienda{
+  position: relative;
+}
+.nav__subList{
+  position: absolute;
+  display: none;
+}
+.nav .nav__link{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav .nav__link:hover{
+  color: white;
+  text-decoration: underline;
+}
+.nav__subList .nav__subItem{
+width: 8.75rem;
+height: 1.875rem;
+background-color: #364f85;
+display: block;
+margin-left: 0;
+padding-top: 0.313rem;
+
+}
+.nav__subItem .nav__link{
+  padding-left: 2.5rem;
+}
+
+.nav__list .nav__item:hover ul{
+  display: block;
+}
+/*----------------------Main-----------------*/
+
+.section__banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0 auto;
+  width: 90%;
+  
+}
+
+.banner ul{
+  padding: 0;
+  display: flex;
+  width: 400%;
+  height: 300px;
+  animation: cambio 20s infinite alternate;
+}
+.banner li{
+  list-style: none;
+  width: 100%;
+  height: 300px;
+
+}
+.banner img{
+  width: 100%;
+  height: 100%px;
+}
+
+@keyframes cambio {
+  0%{ margin-left: 0;}
+  20%{ margin-left: 0;}
+
+  25%{ margin-left: -100%;}
+  45%{ margin-left: -100%;}
+
+  50%{ margin-left: -200%;}
+  70%{ margin-left: -200%;}
+
+  75%{ margin-left: -300%;}
+  100%{ margin-left: -300%;}
+}
+
+.banner{
+  width: 70%;
+  height: 21.875rem;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerTitle__link{
+  font-family: 'Cormorant Garamond';
+  background-color: #364f85;
+  opacity: 0.7;
+  color: white;
+  text-decoration: none;
+}
+
+.banner__title{
+  font-family: 'Cormorant Garamond';
+  position: absolute;
+  top: 50%;
+  padding-left:12px ;
+  left:50%;
+  width: 100px;
+  height: 30px;
+  background-color: #364f85;
+  opacity: 0.8;
+}
+.aside{
+  width: 30%;
+  height: 21.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.aside--secondary{
+margin-top: 20px;
+}
+.aside__container{
+  width:100%;
+  height: 50%;
+}
+.aside__image{
+  width: 100%;
+  height: 100%;
+}
+.item__title{
+  margin-left: 68px;
+  font-family:'Cormorant Garamond';
+  font-size: 30px;
+  margin-top: 10px;
+  animation: item__title 5s ease;
+
+  }
+  @keyframes item__title {
+    0%{
+      opacity: 0;
+      transform:translateX(-300px);
+    }
+    100%{
+      opacity: 1;
+      transform:translateX(0px);
+    }
+  }
+
+.item__row{
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  justify-content: space-evenly;
+  align-content:center ;
+}
+.item{
+  width: 100%;
+  height: 295px;
+  border: solid 2px black;
+  margin-top: 40px;
+  transition: all 2s linear;
+
+}
+
+.item:hover{
+  transform: scale(1.05);
+  box-shadow: 2px 4px 10px 4px #364f85;
+}
+
+.item__image{
+  width: 100%;
+  height: 200px;
+}
+
+.item__paragraph{
+  width: 200px;
+  top: 20px;
+}
+
+.item_paragraph__lineThrough{
+  text-decoration: line-through;
+  padding-left: 10px;
+}
+.item_paragraph__bold{
+  font-weight: 600;
+}
+
+.section__option{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  background-color:  rgb(248,239,225);
+  margin-bottom: 10px;
+}
+
+.option__container{
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border:solid 5px #26427d;
+  border-radius: 50%;
+  background-color: #e8a188;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fa-money-bill-alt,.fa-truck,.fa-gift{
+  font-size: 50px;
+  margin-top: 5%;
+  color: white;
+  
+}
+.option__titulo{
+  margin-top: 10px;
+  font-family: 'Cormorant Garamond';
+  font-size: 25px;
+}
+.option{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+/*------------Footer---------------*/
+.container__footer{
+  width: 100%;
+  background-color: rgb(2, 17, 68);
+}
+.footerRow__primary{
+  margin-top: 40px;
+  width: 100%;
+  height: 50px;
+  background-color:#263d6e;
+}
+.footer__paragraph{
+  text-align: center;
+  padding-top: 15px;
+  font-weight: 600;
+}
+.footer__paragraph > a{
+  color: white;
+  text-decoration: none;
+}
+
+.footerRow__secondary__container,.footerCol,.footer__socialMedia{
+  display: flex;
+  justify-content:space-evenly;
+  align-content: center;
+}
+.footerRow__secondary__container{
+  padding-top:15px;
+}
+.footerCol{
+  flex-direction: column;
+}
+.footer__socialMedia a{
+  margin-top: 2px;
+  margin-right: 3px;
+}
+.footer__logo{
+  padding-left: 95px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.socialMedia__paragraph{
+  color: rgb(156, 143, 143);
+  margin-right: 5px;
+  font-weight: 600;
+  
+}
+.footer__titulo{
+  font-size: 16px;
+  color: rgb(156, 143, 143);
+}
+.footer__link{
+  font-size: 12px;
+  color:rgb(156, 143, 143);
+}
+
+.footer__link{
+  text-decoration: none;
+}
+.footer__link:hover{
+  text-decoration: underline;
+}
+footer hr{
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  margin-top: 20px;
+  border: solid 1px rgb(156, 143, 143);
+  
+}
+.copyright{
+  text-align: center;
+  font-size: 12px;
+  margin-top: 35px;
+  color:rgb(156, 143, 143);
+}
+
+/*---------------------------------MiCUENTA.HTML--------------------------------------*/
+.section-cuenta{
+  margin-top: 80px;
+}
+.cuentaForm{
+  width:40% ;
+  height:338px ;
+  margin: 0 auto;
+  border: solid 2px rgb(226, 224, 224);
+  padding: 15px;
+}
+.cuentaForm-titulo{
+  margin:15px 0;
+  text-align: center;
+  font-size: 25px;
+}
+.cuentaForm-input{
+  width: 500px;
+  height: 30px;
+  margin:5px 0;
+  border: solid 2px rgb(226, 224, 224);
+  border-radius: 4px;
+  outline: none;
+  
+}
+.asteristico{
+  color: red;
+}
+
+.cuentaForm-button{
+  width: 120px;
+  height: 30px;
+  margin-right: 155px;
+  margin-top: 10px;
+  border: solid 1px #26427d;
+  border-radius: 20px;
+  color:white;
+  background-color:#26427d;
+  transition: all, 0.5s ease-in;
+}
+
+.cuentaForm-button:hover{
+  background-color: rgb(73, 73, 172);
+  border: solid 2px #26427d;
+  width: 125px;
+  height: 35px;
+}
+
+.cuentaForm details a{
+  font-size: 14px;
+  text-decoration: none;
+}
+.cuentaForm details{
+  font-size: 14px;
+}
+
+.cuenta-texto{
+  text-align: center;
+  margin: 50px 0;
+}
+.datos-registro{
+  display: inline-block;
+}
+.cuenta-hr{
+  width: 148px;
+}
+
+.cuenta-texto h3{
+  font-size: 14px;
+  color: rgb(44, 42, 42);
+}
+.cuenta-link{
+  width: 542px;
+  height: 40px;
+  background: radial-gradient(circle at center, rgba(232,161,136,0.8), rgb(54,79,133));
+  margin-left: 404px;
+  padding-top: 10px;
+  text-decoration: none;
+  color: aliceblue;
+  border:outset 1px #26427d;
+  display: block;
+  margin-top: 10px;
+  transition: background-color, 3s;
+}
+
+.cuenta-link:hover{
+  background-color: #364f85;
+}
+
+/*-----------------------------------CONTACTO.HTML-------------------------------------*/
+.contacto-main{
+  margin: 50px auto;
+}
+.section-contacto{
+  width: 70%;
+  height:550px;
+  margin: 0 auto;
+  position: relative;
+}
+.nosotros-banner{
+  width: 90%;
+  margin:0 auto;
+  height: 400px;
+  background-image: url("../images/imagennosotrosbanner3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nosotrosBanner-texto{
+  text-align: center;
+  padding-top: 180px;
+}
+
+.nosotros-banner .nosotrosBanner-titulo{
+  font-size: 50px;
+  color: #26427d;
+}
+
+.container-contacto{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacto-info{
+  width: 100%;
+  height: 498px;
+}
+.contacto-info .contacto{
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.contacto-info h3{
+  margin: 10px 0;
+}
+
+.contacto p{
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.contacto address{
+  font-size: 12px;
+}
+.contacto-info hr{
+  margin: 20px 0;
+  width:440px ;
+}
+.input-texto{
+  width: 440px;
+  height: 25px;
+  margin-top:10px ;
+  border: solid 1px #26427d;
+  border-radius: 2px;
+  background-color:rgb(236, 231, 231);
+}
+
+.formulario-contacto textarea{
+  margin-top:10px;
+  width: 440px;
+  height: 150px;
+  font-size: 16px;
+}
+
+.input-checkbox{
+  margin-top: 10px;
+  height: 15px;
+  width: 15px;
+}
+.input-button{
+  width: 120px;
+  height: 30px;
+  margin-right: 195px;
+  margin-top: 10px;
+  border: solid 1px #26427d;
+  border-radius: 20px;
+  color:white;
+  background-color:#26427d;
+  cursor: pointer;
+  transition:all 2s linear;
+}
+.input-button:hover{
+  background-color: rgb(92, 92, 161);
+  border: solid 2px #26427d;
+}
+
+.contacto-mapa{
+  width: 50%;
+  height: 470px;
+  position: absolute;
+  top:0;
+  right: 0;
+}
+.contacto-mapa h3{
+  margin-top: 10px;
+}
+
+iframe{
+  width: 450px;
+  height: 400px;
+  margin-top: 15px;
+}
+
+/*-----------------------------------ACERCA_DE_NOSOTROS.HTML-----------------------------------*/
+.main-nosotros{
+  width: 80%;
+  margin: 20px auto;
+}
+.nosotrosBanner-texto{
+  margin-top: 40px;
+  width: 1200px;
+  margin: 40px auto;
+  height: 400px;
+  background-image: url("../images/imagennosotrosbanner3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.nosotrosBanner-texto{
+  text-align: center;
+  padding-top: 180px;
+}
+.nosotrosBanner-titulo{
+  font-size: 50px;
+  color: #26427d;
+  font-family:'Cormorant Garamond';
+}
+.nosotrosBanner-parafo{
+  font-size: 25px;
+  font-family:'Cormorant Garamond';
+  color: white;
+  margin-right: 37px;
+}
+.main-nosotros{
+  display: grid;
+  grid-template-areas:
+  "nosotrosBanner-texto nosotrosBanner-texto nosotrosBanner-texto "
+  "section-mision      section-mision     section-mision"
+  "section-vision      section-vision     section-vision"
+  "titulo-equipo       titulo-equipo      titulo-equipo"
+  "equipo-fundador1    equipo-fundador2   equipo-fundador3";
+  grid-template-rows:auto;
+  grid-template-columns: auto;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.nosotrosBanner-texto{
+  grid-area: nosotrosBanner-texto;
+  margin-top: 20px;
+}
+.section-mision{
+  grid-area: section-mision;
+}
+.section-vision{
+  grid-area: section-vision;
+}
+.titulo-equipo{
+  grid-area: titulo-equipo;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.equipo-fundador1{
+  grid-area: equipo-fundador1;
+  margin-left: 170px;
+}
+.equipo-fundador2{
+  grid-area: equipo-fundador2;
+}
+.equipo-fundador3{
+  grid-area: equipo-fundador3;
+}
+.section-mision,.section-mision{
+  line-height: 50px;
+}
+.titulo-mision,.titulo-vision{
+  text-align: center;
+}
+.mision-parafo{
+  line-height: 30px;
+}
+  
+.equipo-imagen{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border:solid 5px #26427d;
+}
+
+.equipo h3,p{
+  margin-left: 45px;
+}

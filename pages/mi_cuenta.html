@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ae7f132082.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!------------------------------Header------------------------------->
+    <header> 
+      <div class="container">
+        <div class="row row--primary">
+          <div class="col col--primary">
+            <h1  class="header__title">Mi tienda</h1>
+            <a href=""></a>
+          </div>
+          <form class="col col--secondary" action="" >
+              <input class="form__input" type="search" placeholder="Digite el producto">
+              <input class="form__button" type="image" src="../images/search1.png" alt="imgen search" value="submit">
+          </form>    
+          <div class="col col--tertiary">
+            <a href="">
+              <svg width="20px" height="20px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="userIconTitle" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#000000"> <title id="userIconTitle">User</title> <path stroke-linecap="round" d="M5.5,19.5 C7.83333333,18.5 9.33333333,17.6666667 10,17 C11,16 8,16 8,11 C8,7.66666667 9.33333333,6 12,6 C14.6666667,6 16,7.66666667 16,11 C16,16 13,16 14,17 C14.6666667,17.6666667 16.1666667,18.5 18.5,19.5"/> <circle cx="12" cy="12" r="10"/> 
+              </svg>Mi cuenta
+            </a>       
+            <a href="">
+              <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM17 17H7.36729C6.86964 17 6.44772 16.6341 6.37735 16.1414L6.07143 14M2 3H4.5L4.78571 5M4.78571 5H5H21L18 14H6.5H6.07143M4.78571 5L6.07143 14M11 19C11 20.1046 10.1046 21 9 21C7.89543 21 7 20.1046 7 19C7 17.8954 7.89543 17 9 17C10.1046 17 11 17.8954 11 19Z" stroke="#001A72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Carrito
+            </a>
+          </div>
+        </div>
+      
+        <div class="row row--secondary">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="../index.html">Inicio</a></li>
+              <li class="nav__item nav__item--mitienda"><a class="nav__link" href="acerca_de_nosotros.html">Acerca de Nosotros</a>
+                <ul class="nav__subList">
+                  <li class="nav__subItem"> <a class="nav__link " href="acerca_de_nosotros.html#mision">Misión</a></li>
+                  <li class="nav__subItem"><a class="nav__link" href="acerca_de_nosotros.html#vision">Visión</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="mi_cuenta.html">Mi Cuenta</a></li>
+              <li class="nav__item"><a class="nav__link" href="Categoria.html">Categorías</a></li>
+              <li class="nav__item"><a class="nav__link" href="contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>  
+    </header>
+    <!---------------------------------main--------------------------------->
+    <main id="principal">
+      <section class="section-cuenta">
+        <form class="cuentaForm" action="">
+          <h3 class="cuentaForm-titulo">Iniciar Sesión</h3>
+          <label class="cuentaForm-label" for="usuario">Nombre de usuario o correo electrónico <span class="asteristico"> * </span></label>
+          <br>
+          <input class="cuentaForm-input" type="text" name="usuario" id="usuario" placeholder="Digite su nombre de usuario o email">
+          <br>
+          <label class="cuentaForm-label" for="password">Contraseña<span class="asteristico"> * </span></label>
+          <br>
+          <input class="cuentaForm-input" type="text" name="password" id="password" placeholder="Digite su contraseña">
+          <br>
+          <input class="cuentaForm-Checkbox"type="checkbox" id="recordatorio" name="recodatorio">
+          <label class="cuentaForm-label" for="recodatorio" > Recuérdame</label>
+          <br>
+          <input class="cuentaForm-button" type="submit" name="enviar" value="Acceder">
+          <details>
+              <summary><a href="contacto.html">¿Necesitas ayuda?</a></summary>
+              <p><a href="contacto.html">¿Olvidaste tu contraseña?</a></p>
+              <p><a href="contacto.html">¿Otros problema con inicio de seción?</a></p>
+          </details>
+        </form>
+      </section>
+      <div  class="cuenta-texto">
+        <hr class="datos-registro cuenta-hr">
+        <h3 class="datos-registro" >¿Eres nuevo en Mi tienda?</h3>
+        <hr class="datos-registro cuenta-hr">
+        <a class="cuenta-link" href="">Crea tu cuenta de Mi tienda</a>
+      </div>
+    </main>
+    <!----------------------------Footer------------------------->
+    <footer>
+      <div class="container__footer">
+        <div class="footerRow__primary">
+          <p class="footer__paragraph"><a href=""></a></p>
+        </div>
+        <section class="footerRow__secondary">
+          <div class="footerRow__secondary__container">
+            <div class="footerCol  footerCol--primary col--primay info info-servicio" >  
+              <h4 class="footer__titulo">Servicio al cliente</h4>
+              <a class="footer__link" href="">Contacto</a>
+              <a class="footer__link" href="">Ayuda</a>
+            </div>
+            <div class="footerCol1  footerCol--secondary info info-logo"> 
+              <p><a class="footer__logo" href="">Logo</a></p>
+              <div class="footer__socialMedia">
+                <p class="sociolMedia socialMedia__paragraph">Siguenos en:</p>
+                <a class="logo-row footer__link" href=""><i class="fab fa-facebook"></i> facebook</a>
+                <a class="logo-row footer__link" href=""> <i class="fab fa-youtube"></i> Youtube</a>
+              </div>
+            </div>  
+            <div class=" footerCol  footweCol--tertiary info info-nosotros"> 
+              <h4 class="footer__titulo">Acerca de Nosotros</h4>
+              <a class="footer__link"  href="">Nuestra Visión</a>
+              <a class="footer__link"  href="">Nuestra Misión </a>
+            </div>
+          </div>
+          <hr> 
+          <p class="copyright">&copy; 2021 by Dindy Pierre</p>
+        </section>
+      </div>   
+    </footer>
+  </body>
+</html>
